@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Education";
+}
+
+<h2>Education</h2>
+<form action="" method="post">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Institution Name</th>
+            <th>Degree</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>@ViewBag.University</td>
+            <td>Bsc in CSE</td>
+            <td>@ViewBag.UniResult</td>
+        </tr>
+        <tr>
+            <td>@ViewBag.College</td>
+            <td>HSC</td>
+            <td>@ViewBag.HscResult</td>
+        </tr>
+        <tr>
+            <td>@ViewBag.School</td>
+            <td>SSC</td>
+            <td>@ViewBag.SscResult</td>
+        </tr>
+    </table>
+</form>
