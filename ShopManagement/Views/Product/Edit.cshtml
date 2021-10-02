@@ -1,0 +1,21 @@
+﻿@model ShopManagement.Models.Entities.Product
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<form action="/Product/Edit" method="post">
+    Product Id: <input type="number" name="Id" value="@Model.Id" readonly class="form-control" />
+    <br />
+    Product name: <input type="text" name="Name" value="@Model.Name" class="form-control" />
+    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+    <br />
+
+    Qty: <input type="number" name="Qty" value="@Model.Qty" class="form-control" />
+    <br />
+    Price: <input type="number" step="0.01" name="Price" value="@Model.Price" class="form-control" />
+    <br />
+    Description: <textarea name="Desc" value="@Model.Desc" class="form-control" rows="6" cols="50">@Model.Desc</textarea>
+    <br /><br />
+    <input type="submit" name="submit" value="Edit" class="btn btn-primary" />
+</form>
