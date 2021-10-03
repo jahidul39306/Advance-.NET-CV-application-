@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace ShopManagement.Controllers
 {
@@ -65,5 +66,7 @@ namespace ShopManagement.Controllers
             db.Products.Delete(Id);
             return RedirectToAction("Index");
         }
+
+        
     }
 }
